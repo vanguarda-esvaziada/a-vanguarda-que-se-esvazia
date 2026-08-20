@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+  body {
+    @apply bg-tinta-950 text-papel-100 font-serif antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  ::selection {
+    @apply bg-rubro-600 text-papel-100;
+  }
+}
+
+@layer components {
+  .selo {
+    @apply font-sans text-[0.66rem] font-semibold uppercase tracking-selo text-papel-400;
+  }
+  .regua {
+    @apply h-px w-full bg-gradient-to-r from-transparent via-tinta-600 to-transparent;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
